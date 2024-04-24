@@ -1,0 +1,9 @@
+.completed{
+    color: gray;
+    text-decoration: line-through;
+}
+.inputtedItem{
+    display:flex;
+    flex-flow: nowrap row;
+    cursor: pointer;
+}

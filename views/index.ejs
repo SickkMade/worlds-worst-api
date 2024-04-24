@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Todo:</h1>
+    <ul>
+        <% for(let i = 0; i < items.length; i++) {%>
+            <div class="inputtedItem">
+                <% if(items[i].completed == true) { %>
+                <li class="completed"><%= items[i].thing %></li>
+            <% } else { %>
+                <li><%= items[i].thing %></li>
+            <%  } %>
+                <img src="https://cdn-icons-png.flaticon.com/512/542/542724.png" width='20px'>
+            </div>
+        <% } %>
+    </ul>
+    
+    <h1>Items Left: <%= left %></h1>
+
+    <form action="/addTodo" method="POST">
+        <input type="text" placeholder="Thing To Do" name="todoItem">
+        <input type="submit">
+    </form>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
